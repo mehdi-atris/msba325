@@ -2,11 +2,13 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+url1 = "https://raw.githubusercontent.com/mehdi-atris/msba325/main/sales_data_sample.csv"
+url2 = "https://raw.githubusercontent.com/mehdi-atris/msba325/main/football_stadiums.csv"
 
 # Import Data for First Visualization
-data1 = pd.read_csv(r"C:\Users\PC\OneDrive - American University of Beirut\AUB\Graduate - Business Analytics (MS)\Term I - Fall 2023-2024\MSBA 325\Plotly\sales_data_sample.csv")
+data1 = pd.read_csv(url1)
 # Import Data for Second Visualzation
-data2 = pd.read_csv(r"C:\Users\PC\OneDrive - American University of Beirut\AUB\Graduate - Business Analytics (MS)\Term I - Fall 2023-2024\MSBA 325\Plotly\football_stadiums.csv")
+data2 = pd.read_csv(url2)
 
 # Title
 st.title('My Two Visualizations')
