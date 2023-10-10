@@ -22,7 +22,7 @@ st.markdown('---')
 
 # First Visualization
 st.subheader('First Visualization: Sales Across Countries')
-st.markdown("Hello! Our first Visualization here shows a pie chart of which countries asupermarket sells to. You can move the slider around to group countries whose total sales to are under less than the percentage you pick!")
+st.markdown("Hello! Our first Visualization here shows a pie chart of which countries a supermarket sells to. You can move the slider around to group countries whose total sales to are under less than the percentage you pick!")
 # Group Data by Country + Calculate Quantity Ordered in Each Country
 country_orders = data1.groupby('COUNTRY')['QUANTITYORDERED'].sum().reset_index()
 
