@@ -22,6 +22,8 @@ st.markdown('---')
 
 # First Visualization
 st.subheader('First Visualization: Sales Across Countries')
+st.text("Hello! Our first Visualization here shows a pie chart of which countries a supermarket sells to.")
+st.text("You can move the slider around to group countries whose total sales to are under less than the percentage you pick!")
 
 # Group Data by Country + Calculate Quantity Ordered in Each Country
 country_orders = data1.groupby('COUNTRY')['QUANTITYORDERED'].sum().reset_index()
@@ -58,6 +60,8 @@ st.markdown('---')
 
 # Second Visualization
 st.subheader('Second Visualization: Football Stadiums')
+st.text("Here you can learn more about football stadiums around the world!")
+st.text("Below is a treemap showing the number of football stadiums in each Confederation shown in a treemap.")
 
 # Group Data by Confederation and Count the Number of Stadiums in Each Confederation
 confederation_counts = data2['Confederation'].value_counts().reset_index()
@@ -69,6 +73,8 @@ fig_treemap = px.treemap(confederation_counts, path=['Confederation'], values='S
 
 # Display Treemap in Streamlit
 st.plotly_chart(fig_treemap)
+
+st.text("Just select the Confederation you would like to look at and another interconfederation treemap will appear showing you the countries along with how many stadiums they have!")
 
 # Allow User to Select a Confederation
 selected_confederation = st.selectbox("Select a Confederation:", confederation_counts['Confederation'].unique())
