@@ -71,7 +71,7 @@ fig_treemap = px.treemap(confederation_counts, path=['Confederation'], values='S
 # Display Treemap in Streamlit
 st.plotly_chart(fig_treemap)
 
-st.text("Just select the Confederation you would like to look at and another interconfederation treemap will appear showing you the countries along with how many stadiums they have!")
+st.markdown("Just select the Confederation you would like to look at and another interconfederation treemap will appear showing you the countries along with how many stadiums they have!")
 
 # Allow User to Select a Confederation
 selected_confederation = st.selectbox("Select a Confederation:", confederation_counts['Confederation'].unique())
