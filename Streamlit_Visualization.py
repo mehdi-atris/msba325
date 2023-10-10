@@ -22,7 +22,7 @@ st.markdown('---')
 
 # First Visualization
 st.subheader('First Visualization: Sales Across Countries')
-st.text("Hello! Our first Visualization here shows a pie chart of which countries a<br>supermarket sells to. You can move the slider around to group countries whose total<br>sales to are under less than the percentage you pick!")
+st.markdown("Hello! Our first Visualization here shows a pie chart of which countries a<br>supermarket sells to. You can move the slider around to group countries whose total<br>sales to are under less than the percentage you pick!")
 # Group Data by Country + Calculate Quantity Ordered in Each Country
 country_orders = data1.groupby('COUNTRY')['QUANTITYORDERED'].sum().reset_index()
 
@@ -58,8 +58,8 @@ st.markdown('---')
 
 # Second Visualization
 st.subheader('Second Visualization: Football Stadiums')
-st.text("Here you can learn more about football stadiums around the world!")
-st.text("Below is a treemap showing the number of football stadiums in each Confederation<br>shown in a treemap.")
+st.markdown("Here you can learn more about football stadiums around the world!")
+st.markdown("Below is a treemap showing the number of football stadiums in each Confederation<br>shown in a treemap.")
 
 # Group Data by Confederation and Count the Number of Stadiums in Each Confederation
 confederation_counts = data2['Confederation'].value_counts().reset_index()
